@@ -336,5 +336,15 @@ namespace JamesCormierMethodLibrary
             while (badValue);
             return propPrompt;
         }
+        public static bool GetKey(string repeat, ConsoleKey key1)
+        {
+        Console.Write(repeat);
+                ConsoleKeyInfo cki = Console.ReadKey(true);
+                if (cki.Key == key1)
+                    return false;
+                else
+                    return true;
+        }
+    
     }
 }
