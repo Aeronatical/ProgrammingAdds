@@ -67,7 +67,7 @@ namespace JamesCormierMethodLibrary
             return propPrompt;
         }
         public static float GetValue(float min, float max, string prompt, string errorValue = "You must enter a valid number!", string errorRange = null, string errorLow = null, string errorHigh = null)
-        {
+        {//remember to add the f to the end of the number to make it a float
             string userPrompt = null;
             float propPrompt = 0;
             bool badValue = false;
@@ -121,7 +121,7 @@ namespace JamesCormierMethodLibrary
             return propPrompt;
         }
         public static decimal GetValue(decimal min, decimal max, string prompt, string errorValue = "You must enter a valid number!", string errorRange = null, string errorLow = null, string errorHigh = null)
-        {
+        {//remember to add the m at the end of the number to make it a decimal
             string userPrompt = null;
             decimal propPrompt = 0;
             bool badValue = false;
@@ -175,7 +175,7 @@ namespace JamesCormierMethodLibrary
             return propPrompt;
         }
         public static double GetValue(double min, double max, string prompt, string errorValue = "You must enter a valid number!", string errorRange = null, string errorLow = null, string errorHigh = null)
-        {
+        {//remember to add the d at the end of the number to make it a double
             string userPrompt = null;
             double propPrompt = 0;
             bool badValue = false;
@@ -229,7 +229,7 @@ namespace JamesCormierMethodLibrary
             return propPrompt;
         }
         public static long GetValue(long min, long max, string prompt, string errorValue = "You must enter a valid number!", string errorRange = null, string errorLow = null, string errorHigh = null)
-        {
+        {//remember to add the L to the end of the number to make it a long
             string userPrompt = null;
             long propPrompt = 0;
             bool badValue = false;
@@ -283,7 +283,7 @@ namespace JamesCormierMethodLibrary
             return propPrompt;
         }
         public static uint GetValue(uint min, uint max, string prompt, string errorValue = "You must enter a valid number!", string errorRange = null, string errorLow = null, string errorHigh = null)
-        {
+        {//remember to add the u to the end of the number to make it a uint
             string userPrompt = null;
             uint propPrompt = 0;
             bool badValue = false;
