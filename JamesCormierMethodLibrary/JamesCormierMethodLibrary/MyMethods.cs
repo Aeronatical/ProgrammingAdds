@@ -345,6 +345,20 @@ namespace JamesCormierMethodLibrary
                 else
                     return true;
         }
+        public static bool Power(int radAdd)
+        {
+            while (radAdd != 2)
+            {
+                if (radAdd % 2 == 0)
+                {
+                    radAdd = radAdd / 2;
+                }
+                else
+                    return false;
+            }
+            return true;
+        }
+        
     
     }
 }
