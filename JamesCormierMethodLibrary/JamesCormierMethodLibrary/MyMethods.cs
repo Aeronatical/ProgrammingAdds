@@ -337,13 +337,43 @@ namespace JamesCormierMethodLibrary
             return propPrompt;
         }
         public static bool GetKey(string repeat, ConsoleKey key1)
-        {
-        Console.Write(repeat);
+        { //Remember to add one do loop to the main method and have an if statement for a new bool value to make everything repeat
+            bool badRepeat = false;
+            do
+            {
+                Console.Write(repeat);
                 ConsoleKeyInfo cki = Console.ReadKey(true);
                 if (cki.Key == key1)
-                    return false;
+                    badRepeat = false;
                 else
-                    return true;
+                {
+                    badRepeat = true;
+                    return false;
+                }
+            }
+            while (badRepeat);
+            
+            return true;
+        }
+        public static bool GetKey(string repeat, ConsoleKey key1, ConsoleKey key2)
+        { //Remember to add one do loop to the main method and have an if statement for a new bool value to make everything repeat
+            bool badRepeat = false;
+            do
+            {
+                Console.Write(repeat);
+                ConsoleKeyInfo cki = Console.ReadKey(true);
+                if (cki.Key == key1)
+                    badRepeat = false;
+                else if (cki.Key == key2)
+                    badRepeat = false;
+                else
+                {
+                    badRepeat = true;
+                    return false;
+                }
+            }
+            while (badRepeat);
+            return true;
         }
         public static bool Power(int radAdd)
         {
