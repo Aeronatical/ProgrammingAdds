@@ -12,6 +12,22 @@ namespace JamesCormierMethodLibrary
             Console.WriteLine("Press any key to continue...");
             Console.ReadKey(true);
         }
+        public static bool Pause(string pause, ConsoleKey key1)
+        {
+            bool badPause = false;
+            do
+            {
+                Console.Write(pause);
+                ConsoleKeyInfo cki = Console.ReadKey(true);
+                if (cki.Key == key1)
+                {
+                    badPause = true;
+                    return false;
+                }
+            }
+            while (badPause);
+            return true;
+        }
         public static int GetValue(int min, int max, string prompt, string errorValue = "You must enter a valid number!", string errorRange = null, string errorLow = null, string errorHigh = null)
         {
             string userPrompt = null;
@@ -336,7 +352,7 @@ namespace JamesCormierMethodLibrary
             while (badValue);
             return propPrompt;
         }
-        public static bool GetKey(string repeat, ConsoleKey key1)
+        public static bool GetKey(string repeat, ConsoleKey key1) // one variable for repeat, anything else to end
         { //Remember to add one do loop to the main method and have an if statement for a new bool value to make everything repeat
             bool badRepeat = false;
             do
@@ -355,7 +371,7 @@ namespace JamesCormierMethodLibrary
             
             return true;
         }
-        public static bool GetKey(string repeat, ConsoleKey key1, ConsoleKey key2)
+        public static bool GetKey(string repeat, ConsoleKey key1, ConsoleKey key2) // For one of two variable to start or end a program
         { //Remember to add one do loop to the main method and have an if statement for a new bool value to make everything repeat
             bool badRepeat = false;
             do
@@ -363,14 +379,18 @@ namespace JamesCormierMethodLibrary
                 Console.Write(repeat);
                 ConsoleKeyInfo cki = Console.ReadKey(true);
                 if (cki.Key == key1)
+                {
                     badRepeat = false;
+                    
+                }
                 else if (cki.Key == key2)
-                    badRepeat = false;
-                else
                 {
                     badRepeat = true;
                     return false;
                 }
+                else
+                    badRepeat = true;
+                
             }
             while (badRepeat);
             return true;
